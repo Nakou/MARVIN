@@ -1,0 +1,26 @@
+    ======================================================
+    ___  ___     ___     ______    _   _   _____    _   _
+    |  \/  |    / _ \    | ___ \  | | | | |_   _|  | \ | |
+    | .  . |   / /_\ \   | |_/ /  | | | |   | |    |  \| |
+    | |\/| |   |  _  |   |    /   | | | |   | |    | . ` |
+    | |  | | _ | | | | _ | |\ \  _\ \_/ /_ _| |_ _ | |\  |
+    \_|  |_/(_)\_| |_/(_)\_| \_|(_)\___/(_)\___/(_)\_| \_/
+
+Marvellous, Artificial, Recursive and Virtual Intelligent Network
+   =======================================================
+
+Current Version : 0.0.1a
+Current Status : Not Working
+
+MARVIN is an experiment to create a bot-like AI, capable of remember stuff and so on.
+The primary objective was first to understand how Python works, as a first project
+and next, implement the concepts already developped by the NARVIS team into a new
+AI.
+
+
+========== TODO ==========
+- Prepare Engine
+- Prepare Brain-like-MOCK
+- Put'em together
+- ????
+- PROFIT
