@@ -1,3 +1,4 @@
+from engine.Engine import Engine
 class AbstractInterface:
     def __init__(self):
         return
@@ -6,7 +7,8 @@ class AbstractInterface:
         raise NotImplementedError( "Should have implemented this" )
 
     def inCom(self, message):
-            print(message)
+        engine = Engine(self)
+        engine.start(message)
 
     def outCom(self, message):
         raise NotImplementedError( "Should have implemented this" )

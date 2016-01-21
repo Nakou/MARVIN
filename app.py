@@ -5,12 +5,10 @@ import libs
 from libs import ConfigManager,NakLogger
 from interfaces.InterfacesManager import InterfacesManager
 
-#logger = NakLogger()
-#config = ConfigManager()
-
 class App:
 
     def __init__(self):
+        NakLogger.consoleDebugActive(True)
         NakLogger.debug('Starting MARVIN...')
         ConfigManager.loadConf()
         self.loadInterfaces()
@@ -18,9 +16,6 @@ class App:
     def loadInterfaces(self):
         self.interfaceManager = InterfacesManager()
         self.interfaceManager.startInterface();
-
-    def startEngine(self):
-        NakLogger.debug("...")
 
 # START POINT
 '''

@@ -12,8 +12,8 @@ class InterfacesManager:
             interfaceClassModule = "interfaces." + item.capitalize() + "Interface"
             interfaceClassName = item.capitalize() + "Interface"
             mod = __import__(interfaceClassModule)
-            klass = getattr(mod, interfaceClassName)
-            klass = getattr(klass, interfaceClassName)
+            submod = getattr(mod, interfaceClassName)
+            klass = getattr(submod, interfaceClassName)
             self.interfaces.append(klass())
         NakLogger.debug("Loading InterfaceManager End.")
 
