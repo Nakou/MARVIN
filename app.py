@@ -2,15 +2,14 @@ import os
 import logging
 import libs
 
-from libs import ConfigManager
-from libs import NakLogger
+from libs import ConfigManager,NakLogger
 from interfaces.InterfacesManager import InterfacesManager
 
 #logger = NakLogger()
 #config = ConfigManager()
 
 class App:
-    """ Entry point of the Application """
+
     def __init__(self):
         NakLogger.debug('Starting MARVIN...')
         ConfigManager.loadConf()
