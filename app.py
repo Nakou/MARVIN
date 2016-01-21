@@ -14,9 +14,9 @@ class App:
         self.config.loadConf()
         self.loadInterfaces()
 
-
     def loadInterfaces(self):
         self.interfaceManager = InterfacesManager()
+        self.interfaceManager.startInterface();
 
     def startEngine(self):
         logging.debug("...")
