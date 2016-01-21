@@ -1,17 +1,19 @@
 import os
 import logging
+import libs
 
-from libs.ConfigManager import ConfigManager
+from libs import ConfigManager
+from libs import NakLogger
 from interfaces.InterfacesManager import InterfacesManager
+
+#logger = NakLogger()
+#config = ConfigManager()
 
 class App:
     """ Entry point of the Application """
     def __init__(self):
-        logging.basicConfig(filename='logInfo.log', level=logging.DEBUG)
-        logging.debug("Starting MARVIN...")
-        self.config = ConfigManager()
-        #self.config.setApp(self)
-        self.config.loadConf()
+        NakLogger.debug('Starting MARVIN...')
+        ConfigManager.loadConf()
         self.loadInterfaces()
 
     def loadInterfaces(self):
@@ -19,8 +21,13 @@ class App:
         self.interfaceManager.startInterface();
 
     def startEngine(self):
-        logging.debug("...")
-        #STILL NOTHING
+        NakLogger.debug("...")
 
 # START POINT
-App();
+'''
+Logic :
+Start App => LoadConf => StartInterfaces => Wait-Threaded-Loop
+If message into loop => Thread Start Engine => Parser => Knifer => Meaner => Answer => end turn => Wait-Threaded-Loop
+If message console "stop-marvin-0" => Write Cached Database => Shutdown App
+'''
+app = App();
