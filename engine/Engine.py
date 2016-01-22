@@ -11,6 +11,8 @@ class Engine:
         wordList = Parser.parser(message)
         #Knifer
         #Meaner
+        #  | - Conversation
+        #  | - Context
         #AnswerMaker
         answer = "Ok"
         self.entryInterface.outCom(answer)
